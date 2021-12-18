@@ -1,0 +1,59 @@
+.center{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topdiv{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div img{
+    width: 50%;
+    height: 50%;
+}
+.div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 70%;
+    margin: auto;
+}
+.message{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.message p{
+    font-size: 22px;
+}
+.message button{
+    padding: 10px 50px;
+    background-color:  rgb(10, 10, 238);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+.message button:hover{
+    cursor: pointer;
+    background-color:rgba(10, 10, 238, 0.808);
+}
+@media screen and (max-width:500px) {
+    .message p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:700px) {
+    .div{
+        width:90%;
+    }
+    .message p{
+        font-size: 18px;
+    }
+}

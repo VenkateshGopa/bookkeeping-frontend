@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+.authlogin{
+    height: 100vh;
+}
+.branding {
+    height: 100vh;
+    width: 50%;
+    float:left ;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+.branding img{
+    width: 70%;
+    height: 70%;
+    /* margin: auto; */
+}
+.branding p {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.brandwithname{
+    display: flex;
+    align-items: center;
+    color: rgb(204, 47, 19);
+    font-family: "Lobster", cursive;
+    text-align: left;
+    margin: 20px
+}
+.brandwithname img:hover , .brandwithname p:hover {
+    cursor: pointer;
+}
+.brandwithname p{
+    font-size: 25px;
+}
+.brandwithname img{
+    width: 40px;
+    height: 40px;
+}
+.form{
+    margin-left: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+}
+.img {
+    margin: auto ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.img img{
+    width: 100%;
+    height: 70vh;
+}
+@media screen and (max-width:700px) {
+    .branding{
+        display: none;
+    }
+    .branding{
+        display: none;
+    }
+    .form{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:450px ) and (max-width:700px) {
+    .form{
+        width :70%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+}

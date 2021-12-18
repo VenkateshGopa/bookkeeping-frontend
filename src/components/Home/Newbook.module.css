@@ -1,0 +1,32 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form p{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 18px 0px;
+}
+.form input{
+    width:75%;
+    padding: 6px 5px;
+    margin:5px
+}
+.sel{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+}
+.sel input{
+    width:20%
+}
+.sel label{
+    width:60%
+}
+@media screen and (max-width:500px) {
+    .form p{
+        font-size: 20px;
+    }    
+}

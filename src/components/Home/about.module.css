@@ -1,0 +1,24 @@
+.div{
+    padding: 10% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    font-size: 25px;
+    margin: auto;
+    color: rgb(196, 48, 48);
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.list{
+    font-size: 20px;
+    padding: 10px;
+}
+
+@media screen and (max-width:500px) {
+    .list{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,33 @@
+.div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    font-size: 22px;
+}
+.points{
+    font-size: 15px;
+}
+.pointspad{
+    font-size: 15px;
+    padding-left:15px ;
+}
+.steps{
+    padding: 15px;
+    padding: 2% 10%;
+}
+.steps span{
+    font-weight: bold;
+}
+.div img{
+    width: 30%;
+    height: 30%;
+}

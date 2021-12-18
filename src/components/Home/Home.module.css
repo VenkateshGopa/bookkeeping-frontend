@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+/* .main{
+
+} */
+
+.left{
+    left: 0;
+    top: 0;
+    position: fixed;
+    height: 100vh;
+    background-color: aliceblue;
+    width: 20%;
+    float: left;
+    /* overflow-y: scroll; */
+}
+.lefth{
+    left: 0;
+    top: 0;
+    position: fixed;
+    height: 100vh;
+    background-color: aliceblue;
+    width: 20%;
+    float: left;
+    display: none;
+    /* overflow-y: scroll; */
+}
+.brandwithname{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(240, 248, 255, 0.877);
+}
+.brandwithname img{
+    height: 35px;
+    width: 35px;
+}
+.brandwithname p{
+    color: rgb(209, 43, 43);
+    font-family: "Lobster", cursive;
+    font-size: 21px;
+    margin: 16px 0;
+}
+.right{
+    width: 80%;
+    margin-left: 20%;
+    min-height: 100vh;
+    background-color: rgba(243, 243, 243, 0.63);
+}
+.rightbottom{
+margin-top: 60px;
+margin-left: 1px;
+}
+.selectordiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(217, 233, 241);
+}
+
+.avatar{
+    background-color: rgb(5, 5, 148);
+    width:40px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 50%;
+    margin-bottom:0 ;
+    margin-top: 35px;
+}
+.smallavatar{
+    background-color: rgb(216, 0, 151);
+    width: 18px;
+    height: 18px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 50%;
+    margin: 0;
+}
+.smallavatarc{
+    background-color: rgb(216, 0, 151);
+    width: 18px;
+    height: 18px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 50%;
+    margin: 0;
+}
+.name{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+/* .name:hover{
+    cursor: pointer;
+} */
+.tlist button{
+    border: 2px solid rgb(5, 5, 148);
+    padding: 8px 30px;
+    color: rgb(5, 5, 148);
+    border-radius: 4px;
+    background-color: rgba(240, 248, 255, 0);
+    margin-bottom: 15px;
+}
+.tlist button:hover{
+    cursor: pointer;
+    background-color: rgb(179, 216, 250);
+}
+.count{
+    font-size: 16px;
+    color: rgb(124, 127, 129);
+    margin-top: 5px;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.nameandcount{
+    width:80%;
+}
+.nameandcount p{
+    margin: 3px 18px;
+    font-size: 13px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:aliceblue;
+    margin: auto;
+    width: 90%;
+    border-bottom: 0.1px solid rgba(134, 133, 133, 0.315);
+}
+.nav:hover{
+    cursor: pointer;
+}
+.navbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:aliceblue;
+    margin: 20px auto;
+}
+.navbtn button{
+    padding: 10px 35px;
+    background-color: rgb(209, 43, 43);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.navbtn button:hover{
+    cursor: pointer;
+    background-color: rgba(209, 43, 43, 0.863);
+}
+
+.nav p{
+    padding: 0 10px;
+    margin: 20px 0;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding-right: 5%;
+    background-color: white;
+}
+.pname{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 16px 0;
+    margin-left:10px;
+}
+.cname{
+    font-size: 20px;
+    margin: 16px 0;
+    margin-left:10px;
+}
+.navbar{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 80%;
+}
+.menu{
+    transform: rotate(90deg);
+    font-weight: bold;
+    padding: 0px 15px;
+}
+.menu:hover{
+    cursor: pointer;
+}
+.card{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 5px;
+    width: 26%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.card div{
+    margin: 15px 0;
+    background-color: rgb(206, 237, 250);
+    padding: 0 10px ;
+    border-bottom-left-radius: 25%;
+}
+.muted{
+    font-size: 15px;
+    margin: 15px 0;
+    color: rgb(143, 143, 143);
+    font-weight: 500;
+}
+.amount{
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    margin: 15px 0;
+    text-align: end;
+}
+.pos{
+    font-size: 15px;
+    color: rgb(18, 187, 69);
+    font-weight: bold;
+    margin: 15px 0;
+    text-align: end;
+}
+.neg{
+    font-size: 15px;
+    color: rgb(243, 59, 59);
+    font-weight: bold;
+    margin: 15px 0;
+    text-align: end;
+}
+.customernum p{
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(88, 89, 90);
+    margin-bottom: 10px;
+}
+.customernum span{
+    font-weight: 400;
+    font-size: 15px;
+}
+.customerlist{
+    background-color: white;
+    width: 95%;
+    min-height: 55vh;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 10px;
+}
+.customernum button{
+    border: none;
+    padding: 8px 20px ;
+    background-color: rgb(72, 27, 236);
+    color: white;
+    border-radius: 4px;
+    font-weight: 400;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-bottom: 25px;
+}
+.customernum button:hover{
+    background-color: rgba(72, 27, 236, 0.74);
+}
+.customernum{
+    display: flex;
+    flex-direction: column;
+}
+.profilec {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10%;
+    align-items:center;
+    padding-right: 5%;
+}
+.customerlist table tbody tr:hover{
+    cursor: pointer;
+    background-color: aliceblue;
+}
+.redbal{
+    color: rgb(243, 59, 59);
+    font-weight: 500;
+}
+.greenbal{
+    color: rgb(18, 187, 69);
+    font-weight: 500;
+}
+.red{
+    color: rgb(243, 59, 59);
+    border-radius: 5px;
+}
+.green{
+    color: rgb(18, 187, 69);
+    border-radius: 5px;
+}
+.btn{
+    margin-top: 80px;
+    margin-left: 10px;
+    border:none;
+    text-decoration: underline;
+}
+@media screen and (min-width:699px) {
+    .card{
+        width:31%;
+    }
+    .card div{
+        margin: 5px;
+    }
+    .menu{
+        display: none;
+    }
+    .navbar{
+        justify-content: flex-end;
+    }
+    .lefth{
+        display: block;
+    }
+}
+@media screen and (max-width:699px) {
+    .cards{
+        flex-direction: column;
+    }
+    .card{
+        width: 85%;
+    }
+    .left{
+        width: 60%;
+    }
+    .right{
+        width: 100%;
+        margin-left: 0;
+    }
+    .navbar{
+        width: 100%;
+    }
+    .customernum button{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width:500px) and (max-width:699px){
+    .card{
+        width: 60%;
+    }
+    .left{
+        width: 40%;
+    }
+    .card div{
+        margin: 2px;
+    }
+    
+}
+@media screen and (min-width:700px) and (max-width:950px){
+    .left{
+        width: 25%;
+    }
+    .lefth{
+        width: 25%;
+    }
+    .nav{
+        width: 75%;
+    }
+    .right{
+        width: 75%;
+        margin-left: 25%;
+    }
+    .muted{
+        font-size: 12px;
+    }
+    .card img{
+        width: 40%;
+    }
+    .card{
+        padding: 0px 5px;
+    }
+    .navbar{
+        width: 75%;
+    }
+    .tlist button{
+        border: 2px solid rgb(5, 5, 148);
+        padding: 8px 35px;
+    }
+}
+@media screen and (min-width:1000px) {
+    .card{
+        width: 25%;
+    }
+}
+@media screen and (max-width:450px) {
+    .customerlist table thead{
+        font-size: 12px;
+    }
+    .cname{
+        font-size: 10px;
+    }
+    .red, .green, .redbal , .greenbal{
+        font-size: 12px;
+    }
+    .smallavatarc{
+        width: 15px;
+        height: 15px;
+        font-size: 12px;
+    }
+}

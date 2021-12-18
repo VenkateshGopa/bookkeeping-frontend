@@ -1,0 +1,33 @@
+.div{
+    background-color: rgb(44, 216, 44);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position:fixed;
+    top: 5%;
+    right: 5%;
+    width:15%;
+    border: 1px solid rgb(1, 80, 1);
+}
+.divnone{
+    background-color: rgb(44, 216, 44);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position:fixed;
+    top: 5%;
+    right: 5%;
+    width:15%;
+    border: 1px solid rgb(1, 80, 1);
+    display: none;
+}
+.div p , .divnone p{
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    margin: 0px;
+}

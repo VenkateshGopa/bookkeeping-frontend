@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+body {
+  margin: 0;
+}
+.div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.maindiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 2%;
+  /* padding: 10px; */
+}
+.resetdiv{
+  width: 50%;
+  display: flex;
+  top:35vh;
+  left: 25%;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 2%;
+  padding: 10px;
+}
+.resetdiv p{
+    font-size: 22px;
+    font-weight: bold;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.brand {
+  font-family: "Lobster", cursive;
+  text-align: center;
+  color: rgb(204, 47, 19);
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.brandwithname{
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(204, 47, 19);
+    font-family: "Lobster", cursive;
+}
+.brandwithname p{
+    display: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.brandwithname img{
+    width: 100px;
+    height: 100px;
+}
+.fpmessage {
+  margin: 0 7%;
+  font-size: 12px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.692);
+}
+.message {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.bottom {
+  text-align: center;
+}
+
+.form label {
+  font-size: 20px;
+  color: black;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+.form input {
+  height: 20px;
+  padding: 8px;
+}
+
+.form button ,.resetdiv button {
+  padding: 10px;
+  margin-top: 15px;
+  background-color: rgb(10, 10, 238);
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form button:hover , .resetdiv button:hover{
+  background-color: rgba(10, 10, 238, 0.8);
+  
+}
+form button:disabled {
+    background-color: rgba(101, 101, 131, 0.8);
+    cursor: progress;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkbox span {
+  padding-left: 10px;
+}
+.name {
+  display: flex;
+  margin-top: 10px;
+}
+
+.name input {
+  width: 85%;
+}
+.bottom a {
+  text-decoration: none;
+}
+.bottom a:hover {
+  text-decoration: underline;
+}
+.disable:hover{
+    cursor: not-allowed;
+}
+.error {
+  text-align: center;
+  font-size: 14px;
+  color: rgb(184, 15, 15);
+  margin-bottom: 20px;
+  background-color: rgb(250, 237, 237);
+  border: 1.5px solid rgb(243, 155, 155);
+  padding: 10px 0;
+  border-radius: 5px;
+}
+.padding{
+    margin-bottom: 15px;
+}
+.center{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 700px) {
+    .maindiv{
+        box-shadow: none;
+    }
+    .brandwithname p{
+        display: block;
+    }
+    .brandwithname img{
+        width: 40px;
+        height: 40px;
+    }
+    .resetdiv {
+        width: 90%;
+        left: 3%;
+    }
+}
+@media screen and (max-width: 450px) {
+  .maindiv {
+    width: 95%;
+  }
+  .bottom {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+  .maindiv {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .maindiv {
+    width: 70%;
+  }
+}
