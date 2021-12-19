@@ -30,6 +30,13 @@ const Transaction = () =>{
     const close = () =>{
         setform({got:false , give:false});
     }
+    const deletedata = async () =>{
+        console.log(books , params.id)
+        await axios.get(`http://localhost:3001/delete/${params.id}`,{
+        headers: {'Authorization': `Bearer ${localStorage.getItem('loggedin')}`}});
+        navigate('/home/dashboard')
+      }
+    
 return(
     <div className={classes.rightbottom}>
         {form.got && <Entry close={close} name={books.name} type='got' refresh={fetch}/>}
@@ -48,7 +55,7 @@ return(
           </div>
         </div>
         </div>
-
+         <button onClick={deletedata}>Delete data</button>
         <div className={clas.buttondiv}>
             <p className={clas.message}>Transactions({books.number} Transactions)</p>
             <div className={clas.buttons}>
