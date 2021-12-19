@@ -36,11 +36,6 @@ const Nhome = () => {
     const redirect = (props) =>{
         navigate(`/home/${props._id}`)
     }
-    const deletedata = async (props) =>{
-      await axios.get(`http://localhost:3001/delete/${props}`,{
-      headers: {'Authorization': `Bearer ${localStorage.getItem('loggedin')}`}});
-      fetch();
-    }
     const shownew = () =>{
         setnewbook(prev => !prev);
     }
@@ -100,7 +95,6 @@ const Nhome = () => {
                   </div></td>
                 <td onClick={() =>(redirect(ele))} className={ele.transaction === "You'll Get" ? classes.red : classes.green}>{ele.transaction === "You'll Get" ? <i className="fas fa-arrow-down">You'll Get</i>  : <i className="fas fa-arrow-up">You'll Give</i> } </td>
                 <td onClick={() =>(redirect(ele))} className={ele.transaction === "You'll Get" ? classes.redbal : classes.greenbal}>₹ {ele.bal <0 ? -(ele.bal) : ele.bal}</td>
-                <td  onClick={() =>(deletedata(ele._id))}  ><button onClick={() =>(deletedata(ele._id))}>Delete</button></td>
                 </tr>
                 </>
                 )}
