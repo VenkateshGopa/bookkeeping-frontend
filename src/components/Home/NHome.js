@@ -11,6 +11,7 @@ const Nhome = () => {
     const [newbook , setnewbook] = useState(false);
     const [book , setbooks] = useState([]);
     const [dashboard , setdashboard] = useState({});
+
     const navigate = useNavigate();
     useEffect( () =>{
         fetch();
@@ -35,7 +36,11 @@ const Nhome = () => {
     const redirect = (props) =>{
         navigate(`/home/${props._id}`)
     }
-
+    const deletedata = async (props) =>{
+      await axios.get(`http://localhost:3001/delete/${props}`,{
+      headers: {'Authorization': `Bearer ${localStorage.getItem('loggedin')}`}});
+      fetch();
+    }
     const shownew = () =>{
         setnewbook(prev => !prev);
     }
@@ -87,14 +92,15 @@ const Nhome = () => {
               
               <tbody>
                   {book.map(ele => <>
-                <tr key={ele._id} onClick={() =>(redirect(ele))}>
-                  <td>
+                <tr key={ele._id} >
+                  <td onClick={() =>(redirect(ele))}>
                     <div className={classes.profilec}>
                     <p className={classes.smallavatarc}>{ele.name[0].toUpperCase()}</p>
                     <p className={classes.cname}>{ele.name}</p>
                   </div></td>
-                <td className={ele.transaction === "You'll Get" ? classes.red : classes.green}>{ele.transaction === "You'll Get" ? <i className="fas fa-arrow-down">You'll Get</i>  : <i className="fas fa-arrow-up">You'll Give</i> } </td>
-                <td className={ele.transaction === "You'll Get" ? classes.redbal : classes.greenbal}>₹ {ele.bal <0 ? -(ele.bal) : ele.bal}</td>
+                <td onClick={() =>(redirect(ele))} className={ele.transaction === "You'll Get" ? classes.red : classes.green}>{ele.transaction === "You'll Get" ? <i className="fas fa-arrow-down">You'll Get</i>  : <i className="fas fa-arrow-up">You'll Give</i> } </td>
+                <td onClick={() =>(redirect(ele))} className={ele.transaction === "You'll Get" ? classes.redbal : classes.greenbal}>₹ {ele.bal <0 ? -(ele.bal) : ele.bal}</td>
+                <td><button onClick={() =>(deletedata(ele._id))}>Delete</button></td>
                 </tr>
                 </>
                 )}
