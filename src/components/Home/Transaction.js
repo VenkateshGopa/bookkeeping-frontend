@@ -55,7 +55,7 @@ return(
           </div>
         </div>
         </div>
-         <button onClick={deletedata}>Delete data</button>
+         <button className={classes.deletebtn} onClick={deletedata}>Delete data</button>
         <div className={clas.buttondiv}>
             <p className={clas.message}>Transactions({books.number} Transactions)</p>
             <div className={clas.buttons}>
