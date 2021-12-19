@@ -273,6 +273,18 @@ margin-left: 1px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 10px;
 }
+.customerlist table tbody tr td button{
+    padding: 5px 15px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(212, 7, 7);
+    border: none;
+    border-radius: 5px;
+}
+.customerlist table tbody tr td button:hover{
+    background-color: rgb(212, 7, 7,0.80);
+    cursor: pointer;
+}
 .customernum button{
     border: none;
     padding: 8px 20px ;
