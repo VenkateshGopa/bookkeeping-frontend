@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import {useParams} from 'react-router' 
+import {useNavigate, useParams} from 'react-router' 
 import classes from "./Home.module.css";
 import clas from "./Transaction.module.css";
 import bal from '../../bal.svg';
@@ -10,6 +10,7 @@ const Transaction = () =>{
     const [trans, settrans] =useState([]);
     const [form , setform] = useState({got:false , give:false});
     const params = useParams();
+    const navigate = useNavigate();
     useEffect( () =>{
         const fetch = async() =>{
             const {data}= await axios.get('https://abookkeeping.herokuapp.com/books',{
