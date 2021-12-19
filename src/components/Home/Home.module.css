@@ -438,4 +438,8 @@ margin-left: 1px;
         height: 15px;
         font-size: 12px;
     }
+    .customerlist table tbody tr td button{
+    padding: 5px 12px;
+    font-size: 12px;
+}
 }
