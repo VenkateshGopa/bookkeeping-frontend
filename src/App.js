@@ -10,25 +10,29 @@ import Changepassword from './components/Home/changepassword';
 import Home from './components/Home/Home';
 import Nhome from './components/Home/NHome';
 import Transaction from './components/Home/Transaction';
+import Privateroute from './components/Privateroute';
+import Publicroute from './components/Publicroute';
 
 function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Navigate replace to='/login'/>} >
-        </Route>
-        <Route path='/login' element={<Login/>} />
-        <Route path='/signup' element={<Register/>} />
-        <Route path='/registered' element={<Registered/>}/>
-        <Route path='/active/:id' element={<Activate/>}/>
-        <Route path='/forgotpassword' element={<Forgotpassword/>} />
-        <Route path='/:id/:code' element={<Resetpassord/>}/>
-        <Route path='/home/*' element={<Home/>}>
-          <Route path='dashboard' element={<Nhome/>} />
-          <Route path=':id' element={<Transaction/>} />
-          <Route path='about' element={<About/>} />
-          <Route path='setting' element={<Changepassword/>} />
+        {/* --------------Public routes----------------- */}
+        <Route path='/' element={<Publicroute><Navigate replace to='/login'/></Publicroute>} />
+        <Route path='/login' element={<Publicroute><Login/></Publicroute>} />
+        <Route path='/signup' element={<Publicroute><Register/></Publicroute>} />
+        <Route path='/registered' element={<Publicroute><Registered/></Publicroute>}/>
+        <Route path='/active/:id' element={<Publicroute><Activate/></Publicroute>}/>
+        <Route path='/forgotpassword' element={<Publicroute><Forgotpassword/></Publicroute>} />
+        <Route path='/:id/:code' element={<Publicroute><Resetpassord/></Publicroute>}/>
+        {/* -------------------Private routes------------------- */}
+        <Route path='/home/*' element={<Privateroute><Home/></Privateroute>}>
+          <Route path='dashboard' element={<Privateroute><Nhome/></Privateroute>} />
+          <Route path=':id' element={<Privateroute><Transaction/></Privateroute>} />
+          <Route path='about' element={<Privateroute><About/></Privateroute>} />
+          <Route path='setting' element={<Privateroute><Changepassword/></Privateroute>} />
         </Route> 
+        <Route path = '*' element={<Publicroute><Navigate replace to='/login'/></Publicroute>} />
       </Routes>
     </div>
   );
