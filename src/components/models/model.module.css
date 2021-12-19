@@ -41,6 +41,14 @@
   border-radius: 5px;
   margin: 20px auto;
 }
+.model button:hover{
+  cursor: pointer;
+  background-color: rgb(60, 8, 247);
+}
+.model button:disabled{
+  cursor: progress;
+  background-color: rgb(156, 156, 156);
+}
 .brandwithname{
   font-size: 25px;
   display: flex;
