@@ -7,6 +7,9 @@ import errclass from '../auth/style.module.css';
 const Entry = (props) =>{
     const [data, setdata] = useState({date:'' , details: '' , amount:''});
     const [err,seterr] = useState('')
+    const [clicked , setclicked] = useState(false);
+
+
     const submithandler = async () =>{
         if(data.date.length===0 || data.amount.length===0 )
         {
@@ -14,6 +17,7 @@ const Entry = (props) =>{
         }
         else
         try{
+        setclicked(true)
         await axios.post('https://abookkeeping.herokuapp.com/newbook', {...data , type:props.type , name:props.name},{
             headers: {'Authorization': `Bearer ${localStorage.getItem('loggedin')}`}});
             // console.log({...data , type:props.type , name:props.name})
@@ -21,6 +25,7 @@ const Entry = (props) =>{
             props.close();
         }
         catch(err){
+            setclicked(false)
             seterr("Something went wrong while adding");
         }
         
@@ -30,7 +35,7 @@ const Entry = (props) =>{
     }
 
     return(
-        <Model bname="Add" close={props.close} submit={submithandler}>
+        <Model bname="Add" close={props.close} submit={submithandler} disabled={clicked} >
             {err && <p className={errclass.error}>{err}</p>}
             <div className={classes.form}>
             {/* <p>Add New Customer</p> */}
