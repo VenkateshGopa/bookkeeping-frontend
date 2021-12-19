@@ -280,7 +280,7 @@ margin-left: 1px;
     background-color: rgb(212, 7, 7);
     border: none;
     border-radius: 5px;
-    margin: 10px 20;
+    margin: 10px 20px;
 }
 .deletebtn:hover{
     background-color: rgb(212, 7, 7,0.80);
