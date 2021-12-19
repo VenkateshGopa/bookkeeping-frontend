@@ -100,7 +100,7 @@ const Nhome = () => {
                   </div></td>
                 <td onClick={() =>(redirect(ele))} className={ele.transaction === "You'll Get" ? classes.red : classes.green}>{ele.transaction === "You'll Get" ? <i className="fas fa-arrow-down">You'll Get</i>  : <i className="fas fa-arrow-up">You'll Give</i> } </td>
                 <td onClick={() =>(redirect(ele))} className={ele.transaction === "You'll Get" ? classes.redbal : classes.greenbal}>₹ {ele.bal <0 ? -(ele.bal) : ele.bal}</td>
-                <td><button onClick={() =>(deletedata(ele._id))}>Delete</button></td>
+                <td  onClick={() =>(deletedata(ele._id))}  ><button onClick={() =>(deletedata(ele._id))}>Delete</button></td>
                 </tr>
                 </>
                 )}
