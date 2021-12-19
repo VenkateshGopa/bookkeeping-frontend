@@ -33,7 +33,7 @@ const Transaction = () =>{
     }
     const deletedata = async () =>{
         console.log(books , params.id)
-        await axios.get(`http://localhost:3001/delete/${params.id}`,{
+        await axios.get(`https://abookkeeping.herokuapp.com/delete/${params.id}`,{
         headers: {'Authorization': `Bearer ${localStorage.getItem('loggedin')}`}});
         navigate('/home/dashboard')
       }
