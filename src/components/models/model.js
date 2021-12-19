@@ -1,7 +1,7 @@
 import classes from './model.module.css';
 import logo from '../../logo.png'
+
 const Model = (props) =>{
-    
     return(
     <>
       <div className={classes.backdrop} onClick={props.close}></div>
@@ -14,7 +14,7 @@ const Model = (props) =>{
           <p>Book keeping</p>
         </div>
         {props.children}
-        <button onClick={props.submit}>{props.bname}</button>
+        <button disabled={props.disabled} onClick={props.submit}>{props.bname}</button>
       </div>
     </>
     );
