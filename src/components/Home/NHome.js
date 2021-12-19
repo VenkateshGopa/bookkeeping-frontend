@@ -37,6 +37,7 @@ const Nhome = () => {
         navigate(`/home/${props._id}`)
     }
     const deletedata = async (props) =>{
+      confirm("Do you want to delete ?");
       await axios.get(`http://localhost:3001/delete/${props}`,{
       headers: {'Authorization': `Bearer ${localStorage.getItem('loggedin')}`}});
       fetch();
