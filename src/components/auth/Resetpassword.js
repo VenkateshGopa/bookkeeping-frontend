@@ -43,7 +43,7 @@ const Resetpassord = () =>{
         else
         try{
         setclicked(true)
-        await axios.post('http://localhost:3001/auth/Newpassword', {password:details.password , id: params.id });
+        await axios.post('https://abookkeeping.herokuapp.com/auth/Newpassword', {password:details.password , id: params.id });
         navigate('/login')
         }
         catch(err){
