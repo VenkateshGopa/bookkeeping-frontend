@@ -15,7 +15,7 @@ const Registered = () =>{
             <div className={classes.steps}>
                 <p className={classes.heading}>Your next steps</p>
                 <p className={classes.points}>1. <span>Check your email:</span> Go to your inbox and open the activation email you received from us If you don't see an email from us in the next few minutes, these are the things that could have happened</p>
-                <li className={classes.pointspad}>The email could have landed in your spam/junk folder Please search for an email with the subject "Activate yout book keeping Account"</li>
+                <li className={classes.pointspad}>The email could have landed in your spam/junk folder Please search for an email with the subject "Activate your book keeping Account"</li>
                 <li className={classes.pointspad}>You accidentally gave us annther email address </li>
                 <p className={classes.points}>2. <span>Click the activation link and login</span></p>
                 <p className={classes.points}>3. <span>Start using book keeping </span></p>
