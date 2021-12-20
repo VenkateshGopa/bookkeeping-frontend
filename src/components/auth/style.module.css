@@ -170,13 +170,16 @@ form button:disabled {
         width: 90%;
         left: 3%;
     }
+  .bottom {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 450px) {
   .maindiv {
     width: 95%;
   }
   .bottom {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 700px) and (max-width: 1200px) {
