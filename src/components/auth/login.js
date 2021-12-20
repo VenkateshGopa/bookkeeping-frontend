@@ -59,7 +59,7 @@ const Login = () =>{
                 </form>
             </div>
             <div>
-                <p className={classes.bottom}>Don’t have a Book keeping account yet? <Link to='/signup'>Get started</Link></p>
+                <p className={classes.bottom}>Don’t have a Book keeping account yet? <Link to='/signup'>Sign up</Link></p>
                 <p className={classes.bottom}> forgot your password? <Link to='/forgotpassword'>Click here</Link></p>
             </div>
         </div>
